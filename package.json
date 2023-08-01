@@ -1,0 +1,16 @@
+{
+  "name": "webrtc-server",
+  "version": "1.0.0",
+  "description": "A WebRTC Video Chat application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon app.js"
+  },
+  "author": "David E Lares S <david.e.lares@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.1"
+  }
+}
