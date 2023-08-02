@@ -10,7 +10,7 @@ export const updatePersonalCode = (personalCode) => {
 
 export const updateRemoteVideo = (stream) => {
   const remoteVideo = document.getElementById('remote_video')
-  removeVideo.srcObject = stream
+  remoteVideo.srcObject = stream
 }
 
 export const updateLocalVideo = stream => {
@@ -137,8 +137,8 @@ export const updateMicButton = (micActive) => {
   micButtonImage.src = micActive ? micOffImageSrc : micOnImageSrc
 }
 
-const cameraOnImageSrc = './utils/images/camera.png'
-const cameraOffImageSrc = './utils/images/cameraOff.png'
+const cameraOnImgSrc = './utils/images/camera.png'
+const cameraOffImgSrc = './utils/images/cameraOff.png'
 
 export const updateCameraButton = (cameraActive) => {
   const cameraButtonImage = document.getElementById('camera_button_image')
@@ -149,7 +149,7 @@ export const updateCameraButton = (cameraActive) => {
 export const appendMessage = (message, right = false) => {
   const messagesContainer = document.getElementById('messages_container')
   const messageElement = right ? elements.getRightMessage(message) : elements.getLeftMessage(message)
-  messageContainer.appendChild(messageElement)
+  messagesContainer.appendChild(messageElement)
 }
 
 export const clearMessenger = () => {

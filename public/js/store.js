@@ -47,7 +47,7 @@ export const setScreenSharingActive = (screenSharingActive) => {
 }
 
 // doing the same for the screenSharing
-export const setScreenSharingStream = (strem) => {
+export const setScreenSharingStream = (stream) => {
   state = {
     ...state,
     screenSharingStream: stream
@@ -55,7 +55,7 @@ export const setScreenSharingStream = (strem) => {
 }
 
 // doing the same for the remoteStream
-export const setRemoteStream = (strem) => {
+export const setRemoteStream = (stream) => {
   state = {
     ...state,
     remoteStream: stream

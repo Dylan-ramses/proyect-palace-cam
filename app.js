@@ -35,8 +35,8 @@ io.on('connection', socket => {
     }
   })
   // socket on WebRTC signaling
-  socket.on('webRTC-signaling', data => {
-    const {connectedUserSocketId} = data
+  socket.on('webRTC-signaling', (data) => {
+    const { connectedUserSocketId } = data
     const connectedPeer = connectedPeers.find((peerSocketId) => peerSocketId === connectedUserSocketId)
     if(connectedPeer) {
       io.to(connectedUserSocketId).emit('webRTC-signaling', data)
@@ -83,7 +83,7 @@ io.on('connection', socket => {
   socket.on('user-hanged-up', data => {
     const {connectedUserSocketId} = data
     // grabbing the peer based on data
-    const connectedPeer = connectedPeers.find((peerSocketId) => peerSocketId === calleePersonalCode)
+    const connectedPeer = connectedPeers.find((peerSocketId) => peerSocketId === connectedUserSocketId)
     if(connectedPeer) {
       io.to(connectedUserSocketId).emit('user-hanged-up')
     }

@@ -65,7 +65,7 @@ export const sendPreOfferAnswer = (data) => {
 
 // only one for passing the type through signaling
 export const sendDataUsingWebRTCSignaling = (data) => {
-  socketIO.emit('webRTC-signaling')
+  socketIO.emit('webRTC-signaling', data)
 }
 
 // hanging up logic
