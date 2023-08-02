@@ -1,12 +1,15 @@
 // this is for state management
 
+import * as constants from './constants.js'
+
 let state = {
   socketId: null,
   localStream: null,
   remoteStream: null,
   screenSharingStream: null,
   allowConnectionsFromStrangers: false,
-  screenSharingActive: false
+  screenSharingActive: false,
+  callState: constants.callState.CALL_AVAILABLE_ONLY_CHAT
 };
 
 // seting the socket ID method
@@ -56,6 +59,13 @@ export const setRemoteStream = (strem) => {
   state = {
     ...state,
     remoteStream: stream
+  }
+}
+
+export const setCallState = callState => {
+  state = {
+    ...state,
+    callState,
   }
 }
 
