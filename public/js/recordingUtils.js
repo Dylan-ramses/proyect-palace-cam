@@ -37,11 +37,11 @@ const downloadRecordedVideo = () => {
     type: 'video/webm',
   })
   // link
-  const url = URL.createdObjectURL(blob)
-  const a = document.getElement('a')
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
   document.body.appendChild(a)
   // styling
-  a.style = 'display:none'
+  a.style = 'display:none;'
   a.href = url
   a.download = 'recording.webm'
   a.click()

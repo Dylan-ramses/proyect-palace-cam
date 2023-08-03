@@ -11,7 +11,7 @@ import * as strangerUtils from './strangerUtils.js'
 // import {getIncomingCallDialog} from './elements.js'
 
 // defining the connection
-const socket = io('/') // / because it's on the same directory
+const socket = io(location.origin) // / because it's on the same directory
 
 // execute the video function here
 webRTCHandler.getLocalPreview();
