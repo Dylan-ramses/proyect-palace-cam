@@ -8,17 +8,15 @@
         <link rel="manifest" href="./utils/favicons/site.webmanifest">
     </head>
     <body>
+        
         <div class='main_container'>
+            <!---dashboard-section-->
         <div class='dashboard_container'>
             <div class='logo_container'>
-                <img src='./utils/images/logo.png'></img>
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR31Fy3k7XGyGGSOVLLAlfc7QPwQQyp6IJLkQ&usqp=CAU'></img>
             </div>
             <div>
-                <div class='description_container'>
-                    <p class='description_container_paragraph'>
-                        Talk with other user by passing his personal code or talk with strangers!
-                    </p>
-                </div>
+               
                 <div class='personal_code_container'>
                     <div class='personal_code_title_container'>
                         <p class='personal_code_title_paragraph'>
@@ -66,6 +64,8 @@
                 </div>
                 <div class='dashboard_blur display_none' id='dashboard_blur'></div>
             </div>
+              <!---dashboard-section-end-->
+                <!---call-section-->
         <div class='call_container'>
             <div class='videos_container'>
                 <div id='video_placeholder' class='videos_placeholder'>
@@ -110,6 +110,8 @@
                 </div>
             </div>
         </div>
+         <!---call-section-end-->
+          <!---msg-section-->
         <div class='messenger_container'>
             <div class='messages_container' id='messages_container'></div>
             <div class='new_message_container display_none' id='new_message'>
@@ -120,6 +122,7 @@
             </div>
         </div>
         <div id="dialog"></div>
+        <!---msg-section-end-->
         </div>
         <script src='/socket.io/socket.io.js'></script>
         <script src='./js/elements.js' type='module'></script>
